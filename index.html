@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oráculo de Itzcóatl</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1>El Oráculo</h1>
+   <h2>Mensajes aleatorios con JavaScript</h2>
+   <p id="mensaje">Haz clic en el botón para recibir tu mensaje.</p>
+   <button id="sacarCarta">Sacar carta</button> <!-- Botón para mostrar frase -->
+
+   <script>
+    // Array con frases
+    const frases = [
+        "No te marches de la fuente sin haber saciado toda tu sed",
+        "Que nada te impida mostrar tu auténtica condición",
+        "No cargues con culpas",
+        "El deseo se disuelve en la renuncia",
+        "En el bosque hay un horizonte, una dirección",
+        "Para desapegarse, son buenos los hábitos",
+        "Pocos consiguen atravesar el río y morar a la otra orilla"
+    ];
+
+    // Elementos del DOM
+    const mensaje = document.getElementById("mensaje");
+    const boton = document.getElementById("sacarCarta");
+
+    // Función para mostrar una frase aleatoria
+    function mandarFrase() {
+        const aleatorio = Math.floor(Math.random() * frases.length);
+        mensaje.textContent = frases[aleatorio]; // Cambia el texto del párrafo con la frase aleatoria
+    }
+
+    // Mostrar una frase inicial al cargar la página
+    mandarFrase();
+
+    // Evento para que el botón muestre una nueva frase
+    boton.addEventListener("click", mandarFrase);
+   </script>
+</body>
+</html>
