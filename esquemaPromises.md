@@ -1,3 +1,5 @@
+```mermaid
+
 graph TD
     A[Promise &#40;Objeto&#41;] --> B{Estado Interno};
     B --> B1[Pending &#40;Pendiente&#41;];
