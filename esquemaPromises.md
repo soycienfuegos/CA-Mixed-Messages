@@ -27,21 +27,21 @@ graph TD
     E2 --> E2d[No definida por el programador];
     E2d --> E2e[JavaScript pasa su propia función reject&#40;&#41; al ejecutor];
 
-    A --> F[Métodos para "Consumir" la Promesa];
+    A --> F[Métodos para &#34;Consumir&#34; la Promesa];
 
     F --> F1[.then&#40;onFulfilled, onRejected&#41;];
     F1 --> F1a[onFulfilled &#40;Callback de éxito&#41;];
     F1a --> F1a1[Función que se ejecuta cuando la promesa es Fulfilled];
-    F1a1 --> F1a2[Recibe el valor resuelto como argumento &#40;ej: 'mensajeExito'&#41;];
+    F1a1 --> F1a2[Recibe el valor resuelto como argumento &#40;ej: &#39;mensajeExito&#39;&#41;];
     F1 --> F1b[onRejected &#40;Callback de error - Opcional&#41;];
     F1b --> F1b1[Función que se ejecuta cuando la promesa es Rejected];
-    F1b1 --> F1b2[Recibe la razón del rechazo como argumento &#40;ej: 'mensajeError'&#41;];
+    F1b1 --> F1b2[Recibe la razón del rechazo como argumento &#40;ej: &#39;mensajeError&#39;&#41;];
     F1 --> F1c[Retorna una nueva Promesa &#40;para encadenamiento&#41;];
 
     F --> F2[.catch&#40;onRejected&#41;];
     F2 --> F2a[Es una forma más concisa de .then&#40;null, onRejected&#41;];
     F2a --> F2a1[Función que se ejecuta cuando la promesa es Rejected];
-    F2a1 --> F2a2[Recibe la razón del rechazo como argumento &#40;ej: 'mensajeError'&#41;];
+    F2a1 --> F2a2[Recibe la razón del rechazo como argumento &#40;ej: &#39;mensajeError&#39;&#41;];
     F2 --> F2b[Retorna una nueva Promesa &#40;para encadenamiento&#41;];
 
     F --> F3[.finally&#40;onFinally&#41;];
